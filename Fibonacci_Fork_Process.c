@@ -23,8 +23,16 @@ int main()
 
             printf("How many terms for the Fibonacci sequence?\n", userNum);
             scanf("%d", &userNum);
-            printf("The first %d numbers of the Fibonacci sequence are:\n", userNum);
 
+			while(userNum < 0)
+            {
+                printf("Please enter a non-negative integer.\n");
+                printf("How many terms for the Fibonacci sequence?\n", userNum);
+                scanf("%d", &userNum);
+            }
+			
+			printf("The first %d numbers of the Fibonacci sequence are:\n", userNum);
+			
             for (count = 0; count < userNum; count++)
             {
                 if (count <= 1)
